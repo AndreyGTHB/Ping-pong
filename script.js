@@ -30,16 +30,16 @@ function paint() {
     requestAnimationFrame(paint);
 }
 
+function move_ball(){
+    if (arcX >= 410) {
+        arcX = -10;
+    }
+    arcX++;
+}
 
 arcX = 200;
 arcY = 20;
 paint();
-
-setInterval(function(){
-    if (arcX >= 390) {
-        arcX = 10;
-    }
-    arcX++;
-}, 7);
+setInterval(move_ball, 7);
 
 
